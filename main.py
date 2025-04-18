@@ -7,7 +7,7 @@ def process_srt(file_path, char_limit):
     for line in lines:
         stripped = line.strip()
         if not stripped or '-->' in stripped or stripped.isdigit():
-            output.append(line)
+            output.append(line + '\n')
             continue
 
         candidate = f"{buffer} {stripped}".strip()
